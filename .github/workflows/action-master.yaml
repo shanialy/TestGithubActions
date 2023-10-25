@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Message
-        run: echo "Hello, world! This is a GitHub Actions workflow echo message."
+        run: echo "Hello, world!"

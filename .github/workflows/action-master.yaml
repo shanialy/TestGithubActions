@@ -1,13 +1,21 @@
-name: Echo Message
+name: testing
 
-on: 
+on:
   push:
     branches:
       - master
 
 jobs:
-  print_message:
+  testing:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Message
-        run: echo "Hello, world!"
+      - name: Checkout code
+        uses: actions/checkout@v2 
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  
+
+      - name: Install pnpm
+        run: npm install   
